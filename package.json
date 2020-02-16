@@ -7,11 +7,10 @@
     "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "ALEXIS",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "heroku": "^7.38.1",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
