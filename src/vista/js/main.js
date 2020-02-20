@@ -23,5 +23,6 @@ socket.on('mensaje desde servidor',function(data){
 })
 
 });
+//alexis
 
     
