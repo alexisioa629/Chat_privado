@@ -7,6 +7,7 @@ const socket= io();
 const htmlMensajeForm=$('#mensaje-form');
 const htmlMensajeCuadro=$('#mensaje');
 const htmlChat=$('#chat');
+const htmlTxtNombre=$('#txtNombre');
 
 //obtener hora
 var fecha= new Date();
@@ -18,7 +19,7 @@ htmlMensajeForm.submit(e=>{
     e.preventDefault(); // evitar que se recargue la pagina
     
     //evento para enviar al servidor sms::::nombre del evento+ de donde lo obtengo
-    socket.emit('mensaje desde cliente',htmlMensajeCuadro.val());
+    socket.emit('mensaje desde cliente',`${htmlTxtNombre.val()}: ${htmlMensajeCuadro.val()}`);
     htmlMensajeCuadro.val('');
 });
 
