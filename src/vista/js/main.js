@@ -8,6 +8,12 @@ const htmlMensajeForm=$('#mensaje-form');
 const htmlMensajeCuadro=$('#mensaje');
 const htmlChat=$('#chat');
 
+//obtener hora
+var fecha= new Date();
+var hora = fecha.getHours();
+var minutos= fecha.getMinutes();
+var h= "hora: ";
+
 //Eventos de html
 htmlMensajeForm.submit(e=>{
     e.preventDefault(); // evitar que se recargue la pagina
@@ -19,7 +25,7 @@ htmlMensajeForm.submit(e=>{
 
 //mostrar los datos a los usuarios
 socket.on('mensaje desde servidor',function(data){
-    htmlChat.append(data+'<br>');
+    htmlChat.append(h+hora+':'+minutos+'='+data+'<br>');
 })
 
 });
