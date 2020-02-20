@@ -12,7 +12,6 @@ const htmlChat=$('#chat');
 var fecha= new Date();
 var hora = fecha.getHours();
 var minutos= fecha.getMinutes();
-var h= "hora: ";
 
 //Eventos de html
 htmlMensajeForm.submit(e=>{
@@ -25,7 +24,8 @@ htmlMensajeForm.submit(e=>{
 
 //mostrar los datos a los usuarios
 socket.on('mensaje desde servidor',function(data){
-    htmlChat.append(h+hora+':'+minutos+'='+data+'<br>');
+    //htmlChat.append(hora+minutos+''+data+'<br>');
+    htmlChat.append(`${hora}:${minutos}<br>${data}<br>`);
 })
 
 });
