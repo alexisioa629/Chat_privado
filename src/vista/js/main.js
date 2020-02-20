@@ -23,7 +23,5 @@ socket.on('mensaje desde servidor',function(data){
 })
 
 });
-// ejecutar sockets
-//io();
-//console.log('chat iniciado');
+
     
