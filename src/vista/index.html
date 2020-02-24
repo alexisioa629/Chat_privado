@@ -12,7 +12,8 @@
 </head>
 <body>
   <!--navegacion con bootstrap-->
-  <nav class="navbar navbar-light bg-warning">
+  <div class="contaniner" id="total">
+  <nav class="navbar navbar-light bg-warning" >
     <a class="navbar-brand mx-auto" href="/">CHAT CON JS Y SOCKET</a>
   </nav>
   <div class="container">
@@ -22,7 +23,7 @@
           <g4>Mensajes en linea </g4>
           <br>
           <g4>Tu nombre va aqui :</g4>
-          <input type="text" id="txtNombre" class="form-control">
+          <input type="text" id="txtNombre" class="form-control" itemref="aaa">
         </div>
 
         <div id="chat" class="card-body"> </div>
@@ -39,6 +40,7 @@
       </div>
     </div>
   </div>
+</div>
 
 <!--libreria jquery -->
 <script
